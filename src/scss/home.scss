@@ -1,0 +1,84 @@
+//====================================================================================================
+.home {
+
+  // .home__container
+
+  &__container {
+    @include horizontal;
+    @media (max-width:$mobile){
+      flex-direction: column; 
+    }
+  }
+
+  // .home__info
+
+  &__info {
+    max-width: rem(485);
+    width: 100%;
+
+    @media (max-width:$mobile){
+      margin-bottom: rem(30); 
+      text-align: center;
+    }
+  }
+
+  // .home__title
+
+  &__title {
+    font-family: "Fraunces", sans-serif;
+    line-height: math.div(63, 58);
+    @include adaptiveValue("font-size", 58, 28, 992, 320, 1);
+
+    &:not(:last-child) {margin-bottom: rem(20);}
+  }
+
+  // .home__text
+
+  &__text {
+    max-width: rem(385);
+    width: 100%;
+    @include adaptiveValue("font-size", 20, 16, 992, 320, 1);
+    letter-spacing: 0.2;
+    line-height: math.div(30, 20);
+    &:not(:last-child) {margin-bottom: rem(30);}
+  }
+
+  // .home__btns
+
+  &__btns {
+  }
+
+  // .home__bg
+
+  &__bg {
+    img {
+      @media (max-width:$tablet){
+        width: 95%;
+      }
+
+      @media (max-width:$mobile){
+        width: 100%; 
+      }
+    }
+  }
+}
+.header {
+
+  // .header__btn
+
+  &__btn {
+    padding: rem(8) rem(32);
+    margin: 0px;
+
+    @media (max-width:$mobile){
+      padding: rem(8) rem(18);
+    }
+
+    @media (max-width:$mobileSmall){
+      padding: rem(6) rem(12);
+    }
+  }
+}
+
+
+//====================================================================================================

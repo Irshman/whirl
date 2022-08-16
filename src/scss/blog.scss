@@ -1,0 +1,122 @@
+.blog {
+  background-color: #F7F9FA;
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  @include adaptiveValue("margin-bottom", 80, 40);
+
+  // .blog__container
+
+  &__container {
+  }
+
+  // .blog__top
+
+  &__top {
+    @include horizontal;
+    &:not(:last-child) {margin-bottom: rem(50);}
+  }
+
+  // .blog__title
+
+  &__title {
+    @include title;
+  }
+
+  // .blog__btn
+
+  &__btn {
+    color: $primaryColor;
+    font-size: rem(17);
+    line-height: rem(27);
+    @media (any-hover: hover){
+      &:hover{
+        color: $hoverColor;
+      }
+    }
+  }
+
+  // .blog__body
+
+  &__body {
+    @include horizontal;
+    margin: 0px rem(-15);
+
+    @media (max-width:$tablet){
+      flex-wrap: wrap; 
+      justify-content: center;
+      row-gap: rem(30);
+    }
+  }
+
+  // .blog__item
+
+  &__item {
+    background-color: #fff;
+    max-width: rem(355);
+    width: 100%;
+    transition: all .3s linear;
+    margin: 0px rem(15);
+
+    @media (any-hover: hover){
+      &:hover{
+        box-shadow: 0 2px 12px rgba(0,0,0,0.1), 0 4px 14px rgba(0,0,0,0.1);
+      }
+    }
+  }
+
+  // .blog__bg
+
+  &__bg {
+    max-width: rem(355);
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+
+  // .blog__info
+
+  &__info {
+    padding: rem(25) rem(25) rem(27);
+
+    @media (max-width:$tablet){
+      padding: rem(15) rem(15) rem(17);
+    }
+  }
+
+  // .blog__tag
+
+  &__tag {
+    font-size: rem(12);
+    padding: rem(2) rem(12) rem(4);
+    background-color: #E6F7FF;
+    color: $primaryColor;
+    margin-bottom: rem(8);
+  }
+
+  // .blog__name
+
+  &__name {
+    font-family: "Fraunces", serif;
+    @include adaptiveValue("font-size", 25, 16, 992, 320, 1);
+    line-height: math.div(31, 25);
+    margin-bottom: rem(12);
+  }
+
+  // .blog__text
+
+  &__text {
+    font-size: rem(14);
+    line-height: rem(19);
+    margin-bottom: rem(16);
+  }
+
+  // .blog__date
+
+  &__date {
+    font-size: rem(12);
+  }
+}

@@ -1,0 +1,73 @@
+.track {
+  background-color: #0070A0;
+  @include adaptiveValue("margin-bottom", 120, 60);
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 100, 50);
+  color: #fff;
+
+  // .track__container
+
+  &__container {
+    @include horizontal;
+
+    @media (max-width:$mobile){
+      flex-direction: column;
+      row-gap: rem(30); 
+    }
+  }
+
+  &__bg {
+    @media (max-width:$mobileSmall){
+      width: 95%; 
+    }
+  }
+
+  // .track__body
+
+  &__body {
+    max-width: rem(480);
+    width: 100%;
+    margin-left: rem(20);
+  }
+
+  // .track__title
+
+  &__title {
+    font-family: "Fraunces", serif;
+    @include adaptiveValue("font-size", 42, 28, 992, 320, 1);
+    line-height: math.div(50, 42);
+    &:not(:last-child) {margin-bottom: rem(18);}
+  }
+
+  // .track__text
+
+  &__text {
+    &:not(:last-child) {margin-bottom: rem(18);}
+  }
+
+  // .track__list
+
+  &__list {
+    &:not(:last-child) {margin-bottom: rem(35);}
+  }
+
+  // .track__item
+
+  &__item {
+    @include horizontal;
+    justify-content: start;
+  }
+
+  // .track__link
+
+  &__link {
+    margin-left: rem(8);
+  }
+
+  // .track__btn
+
+  &__btn {
+    color: #fff;
+    padding: rem(8) rem(30);
+  }
+}

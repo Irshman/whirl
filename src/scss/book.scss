@@ -1,0 +1,65 @@
+.book {
+  @include adaptiveValue("margin-bottom", 130, 65);
+
+  // .book__container
+
+  &__container {
+    background-color: #E6F7FF;
+    padding: rem(64) rem(64) rem(48);
+
+    @media (max-width:$mobileSmall){
+       padding: rem(32) rem(32) rem(24); 
+    }
+  }
+
+  &__wrap {
+    max-width: rem(503);
+    width: 100%;
+  }
+
+  // .book__title
+
+  &__title {
+    @include title;
+    margin-bottom: rem(21);
+  }
+
+  // .book__text
+
+  &__text {
+    margin-bottom: rem(33);
+  }
+
+  // .book__btn
+
+  &__btn {
+  }
+
+  // .book__wash
+
+  &__wash {
+    color: #626A72;
+    @include horizontal;
+    justify-content: start;
+    margin-top: rem(20);
+    font-size: rem(13);
+
+    @media (max-width:$mobile){
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: rem(10); 
+    }
+
+    span {
+      @include horizontal;
+
+      &:not(:last-child) {
+        margin-right: rem(35);
+      }
+
+      img {
+        margin-right: rem(3);
+      }
+    }
+  }
+}

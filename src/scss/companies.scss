@@ -1,0 +1,42 @@
+.companies {
+  
+
+  // .companies__container
+
+  &__container {
+    margin: 0px auto;
+  }
+
+  // .companies__text
+
+  &__text {
+    text-align: center;
+    font-size: rem(24);
+    @include adaptiveValue("font-size", 24, 18, 992, 320, 1);
+    letter-spacing: rem(0.2);
+    line-height: math.div(37, 24);
+  }
+
+  // .companies__items
+
+  &__items {
+    @include horizontal;
+    justify-content: space-evenly;
+    margin-top: rem(30);
+
+    @media (max-width:$mobile){
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+
+    @media (max-width:$mobileSmall){
+      flex-direction: column;
+    }
+  }
+
+  // .companies__item
+
+  &__item {
+    &:not(:last-child) {margin-right: rem(10);}
+  }
+}

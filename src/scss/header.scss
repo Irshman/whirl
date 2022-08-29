@@ -10,6 +10,10 @@
 
 	&__left {
 		@include horizontal;
+
+		@media (max-width:$mobile){
+			width: 100%; 
+		}
 	}
 
 	// .header__nav
@@ -20,7 +24,7 @@
 		margin-left: rem(38);
 
 		@media (max-width:$mobile){
-			 display: none; 
+			display: none; 
 		}
 	}
 
@@ -53,6 +57,10 @@
 	&__btns {
 		@include horizontal;
 		margin: 0px rem(-15);
+
+		@media (max-width:$mobile){
+			display: none;
+		}
 	}
 
 	// .header__btn
@@ -61,6 +69,7 @@
 		margin: 0px rem(15);
 	}
 }
+
 
 //====================================================================================================
 
